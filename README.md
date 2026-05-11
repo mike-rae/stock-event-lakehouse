@@ -45,8 +45,31 @@ The repository evolves incrementally through milestones and explores:
 ---
 
 # Quick Start
+At this stage, Docker Compose runs PostgreSQL only. The Spring Boot application runs locally using Gradle.
+
+A Docker image for the application will be added in a later milestone.
+## Fresh Clone from GitHub
+```bash
+git clone git@github.com:mike-rae/stock-event-lakehouse.git
+cd stock-event-lakehouse
+```
+
+Check requirements:
+```bash
+java --version
+docker --version
+docker compose version
+```
+
+Expected:
+```bash
+Java 21
+Docker installed
+Docker Compose available
+```
 
 ## Start PostgreSQL
+Project reads [docker-compose.yml](./docker-compose.yml) and spins up an in-container PostgreSql db instance.
 ```bash
 docker compose up -d
 ```
