@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: stock-event-lakehouse
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/stocklake
+    username: stocklake
+    password: stocklake
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+    
+  
